@@ -109,9 +109,12 @@
     */
 
       const changeUrls = function () {
-        const link = document.querySelector("a");
-        link.href = "https://www.google.com";
-        link.innerText = "This goes to google";
+        const link = document.querySelectorAll("a");
+        for (let a of link) {
+          a.href = "https://www.google.com";
+          a.innerText = "This goes to google";
+        }
+
         //
       };
 
