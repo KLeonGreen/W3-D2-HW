@@ -175,6 +175,7 @@
       /* EXERCISE 11
      Attach an event listener to the input field in the page that changes the text of the page's subtitle
     */
+
       const changeh2Title = function () {
         const inputField = document.getElementById("input-field");
         const secTitle = document.querySelector("h2");
@@ -182,7 +183,9 @@
         secTitle.innerText = inputField.value;
       };
 
-      window.onload = function () {};
+      window.onload = function () {
+        alert("Hello world");
+      };
 
       /* EXERCISE 13
      Use HTML5 tags to properly provide semantic meaning to the different portions of the page.
