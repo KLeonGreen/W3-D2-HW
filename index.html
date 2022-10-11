@@ -11,11 +11,13 @@
     <div>
       <h1 onclick="makeItClickable()">This is the title of the page</h1>
 
-      <button onclick="changeTitle()">Change Title</button>
+      <button onclick="changeTitle('Something else')">Change Title</button>
       <button onclick="addClassToTitle()">Add Class</button>
       <button onclick="changePcontent()">Change Paragraph</button>
-      <button onclick="addToTheSecond()">Add List</button>
-      <button onclick="addParagraph()">Add Paragraph</button>
+      <button onclick="addToTheSecond('4th item')">Add List</button>
+      <button onclick="addParagraph('new paragraph content')">
+        Add Paragraph
+      </button>
       <button onclick="firstUlDisappear()">Remove List</button>
       <button onclick="paintItGreen()">Add Green Background</button>
       <h2>This is the subtitle of the page</h2>
@@ -73,10 +75,10 @@
      Write a function for changing the title of the document in something else.
     */
 
-      const changeTitle = function (event) {
+      const changeTitle = function (newTitle) {
         const title = document.querySelector("h1");
         // const title = event.target;
-        title.innerText = "Something Else";
+        title.innerText = newTitle;
       };
 
       /* EXERCISE 2
@@ -96,7 +98,7 @@
         const paragraph = document.querySelectorAll("div>p");
         for (let para of paragraph) {
           para.innerText = "new message";
-          para.style.color = "green";
+          //para.style.color = "green";
         }
 
         //
@@ -119,7 +121,7 @@
 
       const addToTheSecond = function (content) {
         const addList = document.getElementById("secondList");
-        addList.append("4th list");
+        addList.append(content);
       };
 
       /* EXERCISE 6
@@ -128,9 +130,7 @@
 
       const addParagraph = function (content) {
         const paragraph2 = document.querySelector("div");
-        paragraph2.append(
-          "Lorem, ipsum dolor sit amet consectetur adipisicing elit. "
-        );
+        paragraph2.append(content);
       };
 
       /* EXERCISE 7
